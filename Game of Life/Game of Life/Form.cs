@@ -401,7 +401,7 @@ namespace Game_of_Life
                 
                 Check_conditions();
                 Print();
-                Thread.Sleep(speed_value * 100);
+                Thread.Sleep(speed_value * 50);
             }
         }
 

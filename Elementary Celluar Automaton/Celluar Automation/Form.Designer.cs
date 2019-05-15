@@ -38,13 +38,13 @@
             this.rule_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.vertical_cells_label = new System.Windows.Forms.Label();
             this.horizontal_cells_label = new System.Windows.Forms.Label();
-            this.vertical_cells_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.horizontal_cells_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.vertical_cells_numericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cell_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rule_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vertical_cells_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontal_cells_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vertical_cells_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox
@@ -125,7 +125,7 @@
             // vertical_cells_label
             // 
             this.vertical_cells_label.AutoSize = true;
-            this.vertical_cells_label.Location = new System.Drawing.Point(643, 244);
+            this.vertical_cells_label.Location = new System.Drawing.Point(643, 270);
             this.vertical_cells_label.Name = "vertical_cells_label";
             this.vertical_cells_label.Size = new System.Drawing.Size(69, 13);
             this.vertical_cells_label.TabIndex = 14;
@@ -134,29 +134,29 @@
             // horizontal_cells_label
             // 
             this.horizontal_cells_label.AutoSize = true;
-            this.horizontal_cells_label.Location = new System.Drawing.Point(631, 270);
+            this.horizontal_cells_label.Location = new System.Drawing.Point(631, 239);
             this.horizontal_cells_label.Name = "horizontal_cells_label";
             this.horizontal_cells_label.Size = new System.Drawing.Size(81, 13);
             this.horizontal_cells_label.TabIndex = 15;
             this.horizontal_cells_label.Text = "Horizontal cells:";
             // 
-            // vertical_cells_numericUpDown
-            // 
-            this.vertical_cells_numericUpDown.Location = new System.Drawing.Point(718, 237);
-            this.vertical_cells_numericUpDown.Name = "vertical_cells_numericUpDown";
-            this.vertical_cells_numericUpDown.Size = new System.Drawing.Size(100, 20);
-            this.vertical_cells_numericUpDown.TabIndex = 16;
-            this.vertical_cells_numericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.vertical_cells_numericUpDown.ValueChanged += new System.EventHandler(this.vertical_cells_numericUpDown_ValueChanged);
-            // 
             // horizontal_cells_numericUpDown
             // 
-            this.horizontal_cells_numericUpDown.Location = new System.Drawing.Point(718, 268);
+            this.horizontal_cells_numericUpDown.Location = new System.Drawing.Point(718, 237);
             this.horizontal_cells_numericUpDown.Name = "horizontal_cells_numericUpDown";
             this.horizontal_cells_numericUpDown.Size = new System.Drawing.Size(100, 20);
-            this.horizontal_cells_numericUpDown.TabIndex = 17;
+            this.horizontal_cells_numericUpDown.TabIndex = 16;
             this.horizontal_cells_numericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.horizontal_cells_numericUpDown.ValueChanged += new System.EventHandler(this.horizontal_cells_numericUpDown_ValueChanged);
+            this.horizontal_cells_numericUpDown.ValueChanged += new System.EventHandler(this.vertical_cells_numericUpDown_ValueChanged);
+            // 
+            // vertical_cells_numericUpDown
+            // 
+            this.vertical_cells_numericUpDown.Location = new System.Drawing.Point(718, 268);
+            this.vertical_cells_numericUpDown.Name = "vertical_cells_numericUpDown";
+            this.vertical_cells_numericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.vertical_cells_numericUpDown.TabIndex = 17;
+            this.vertical_cells_numericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vertical_cells_numericUpDown.ValueChanged += new System.EventHandler(this.horizontal_cells_numericUpDown_ValueChanged);
             // 
             // Form
             // 
@@ -164,8 +164,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(864, 561);
-            this.Controls.Add(this.horizontal_cells_numericUpDown);
             this.Controls.Add(this.vertical_cells_numericUpDown);
+            this.Controls.Add(this.horizontal_cells_numericUpDown);
             this.Controls.Add(this.horizontal_cells_label);
             this.Controls.Add(this.vertical_cells_label);
             this.Controls.Add(this.rule_numericUpDown);
@@ -183,8 +183,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cell_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rule_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vertical_cells_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontal_cells_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vertical_cells_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,8 +202,8 @@
         private System.Windows.Forms.NumericUpDown rule_numericUpDown;
         private System.Windows.Forms.Label vertical_cells_label;
         private System.Windows.Forms.Label horizontal_cells_label;
-        private System.Windows.Forms.NumericUpDown vertical_cells_numericUpDown;
         private System.Windows.Forms.NumericUpDown horizontal_cells_numericUpDown;
+        private System.Windows.Forms.NumericUpDown vertical_cells_numericUpDown;
     }
 }
 

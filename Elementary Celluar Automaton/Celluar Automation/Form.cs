@@ -38,11 +38,11 @@ namespace Celluar_Automation
             rule_numericUpDown.Minimum = 0;
             rule_numericUpDown.Maximum = 255;
 
-            vertical_cells_numericUpDown.Minimum = 3;
-            vertical_cells_numericUpDown.Maximum = pictureBox.Width / cell_size_value;
+            horizontal_cells_numericUpDown.Minimum = 3;
+            horizontal_cells_numericUpDown.Maximum = pictureBox.Width / cell_size_value;
 
-            horizontal_cells_numericUpDown.Minimum = 1;
-            horizontal_cells_numericUpDown.Maximum = pictureBox.Height / cell_size_value;
+            vertical_cells_numericUpDown.Minimum = 1;
+            vertical_cells_numericUpDown.Maximum = pictureBox.Height / cell_size_value;
         }
 
         private void Run_Rule()
@@ -150,8 +150,8 @@ namespace Celluar_Automation
         {
             cell_size_value = decimal.ToInt32(cell_numericUpDown.Value);
             Set_Limits();
-            horizontal_cells_numericUpDown.Value = horizontal_cells_numericUpDown.Minimum;
             vertical_cells_numericUpDown.Value = vertical_cells_numericUpDown.Minimum;
+            horizontal_cells_numericUpDown.Value = horizontal_cells_numericUpDown.Minimum;
         }
 
         private void Rule_numericUpDown_ValueChanged(object sender, EventArgs e)
@@ -161,12 +161,12 @@ namespace Celluar_Automation
 
         private void horizontal_cells_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            horizontal_cells_num = decimal.ToInt32(horizontal_cells_numericUpDown.Value);
+            horizontal_cells_num = decimal.ToInt32(vertical_cells_numericUpDown.Value);
         }
 
         private void vertical_cells_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            vertical_cells_num = decimal.ToInt32(vertical_cells_numericUpDown.Value);
+            vertical_cells_num = decimal.ToInt32(horizontal_cells_numericUpDown.Value);
         }
     }
 }

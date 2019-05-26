@@ -58,6 +58,8 @@
             this.clear_button = new System.Windows.Forms.Button();
             this.neighborhood_box = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.neighborhood_radius_box = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cell_size_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.Nucleation_Box.SuspendLayout();
@@ -69,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.speed_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_cells_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontal_cells_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.neighborhood_radius_box)).BeginInit();
             this.SuspendLayout();
             // 
             // conditions_label
@@ -338,7 +341,7 @@
             // 
             // clear_button
             // 
-            this.clear_button.Location = new System.Drawing.Point(810, 603);
+            this.clear_button.Location = new System.Drawing.Point(810, 613);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(104, 23);
             this.clear_button.TabIndex = 38;
@@ -364,11 +367,31 @@
             this.label10.TabIndex = 40;
             this.label10.Text = "Neighborhood:";
             // 
+            // neighborhood_radius_box
+            // 
+            this.neighborhood_radius_box.Location = new System.Drawing.Point(810, 577);
+            this.neighborhood_radius_box.Name = "neighborhood_radius_box";
+            this.neighborhood_radius_box.Size = new System.Drawing.Size(100, 20);
+            this.neighborhood_radius_box.TabIndex = 37;
+            this.neighborhood_radius_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.neighborhood_radius_box.ValueChanged += new System.EventHandler(this.neighborhood_radius_box_ValueChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(807, 561);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 13);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Neighborhood radius:";
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 654);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.neighborhood_radius_box);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.neighborhood_box);
             this.Controls.Add(this.clear_button);
@@ -399,6 +422,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.speed_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_cells_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontal_cells_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.neighborhood_radius_box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,6 +459,8 @@
         private System.Windows.Forms.Button clear_button;
         private System.Windows.Forms.ComboBox neighborhood_box;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown neighborhood_radius_box;
+        private System.Windows.Forms.Label label11;
     }
 }
 

@@ -420,17 +420,17 @@ namespace Beginning_of_Grain_Growth.src
 
         private int Radius(int i, int j)
         {
-            int[] neighbours = new int[(int)Math.Pow(2*data.Radius, 2)];
+            int[] neighbours = new int[(int)Math.Pow(2*data.Neighborhood_radius, 2)];
 
             int index = 0;
-            for(int k=i-data.Radius; k < i+data.Radius; k++)
+            for(int k=i- data.Neighborhood_radius; k < i+ data.Neighborhood_radius; k++)
             {
                 if (k < 0 || k > data.Grid_values.GetLength(0) - 1)
                 {
                     continue;
                 }
 
-                for (int l=j-data.Radius; l < j+data.Radius; l++)
+                for (int l=j- data.Neighborhood_radius; l < j+ data.Neighborhood_radius; l++)
                 {
                     if(l<0 || l > data.Grid_values.GetLength(1)-1)
                     {
@@ -438,7 +438,7 @@ namespace Beginning_of_Grain_Growth.src
                     }
 
                     double length = Math.Sqrt(Math.Pow(data.Grid_points[i, j].X-data.Grid_points[k, l].X, 2)+Math.Pow(data.Grid_points[i, j].Y-data.Grid_points[k, l].Y, 2));
-                    if(length <= data.Radius*data.Cell_size)
+                    if(length <= data.Neighborhood_radius * data.Cell_size)
                     {
                         neighbours[index] = data.Grid_values[k, l];
                         index++;

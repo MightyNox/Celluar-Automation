@@ -28,6 +28,7 @@ namespace Beginning_of_Grain_Growth.src
         private int radius_cells_num;
 
         private string neighborhood;
+        private int neighborhood_radius;
 
         private Random rnd;
 
@@ -57,6 +58,7 @@ namespace Beginning_of_Grain_Growth.src
         public int Radius_cells_num { get => radius_cells_num; set => radius_cells_num = value; }
         public string Neighborhood { get => neighborhood; set => neighborhood = value; }
         public Point[,] Grid_points { get => grid_points; set => grid_points = value; }
+        public int Neighborhood_radius { get => neighborhood_radius; set => neighborhood_radius = value; }
 
         public void Initialize()
         {

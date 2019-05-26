@@ -65,6 +65,8 @@ namespace Beginning_of_Grain_Growth
             speed_box.Minimum = 1;
             speed_box.Maximum = 100;
 
+            neighborhood_radius_box.Minimum = 1;
+
             neighborhood_box.Items.Add("Von Neumann");
             neighborhood_box.Items.Add("Moore");
             neighborhood_box.Items.Add("Random Pentagonal");
@@ -170,6 +172,11 @@ namespace Beginning_of_Grain_Growth
         private void neighborhood_box_SelectedIndexChanged(object sender, EventArgs e)
         {
             data.Neighborhood = neighborhood_box.SelectedItem.ToString();
+        }
+
+        private void neighborhood_radius_box_ValueChanged(object sender, EventArgs e)
+        {
+            data.Neighborhood_radius = decimal.ToInt32(neighborhood_radius_box.Value);
         }
     }
 }

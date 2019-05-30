@@ -234,7 +234,7 @@ namespace Beginning_of_Grain_Growth.src
             else
             {
                 double value = rnd.NextDouble();
-                if(Math.Exp(-1*energy_diff/data.Kt) < value)
+                if(Math.Exp(-1*energy_diff/data.Kt) >= value)
                 {
                     data.Grid_values[current.X, current.Y] = neighbour_value;
                     data.Grid_energy[current.X, current.Y] = energy_after;

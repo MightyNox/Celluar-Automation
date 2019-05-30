@@ -71,6 +71,7 @@ namespace Beginning_of_Grain_Growth
 
             kt_box.DecimalPlaces = 1;
             kt_box.Minimum = -100;
+            kt_box.Value = (decimal)0.1;
 
             neighborhood_box.Items.Add("Von Neumann");
             neighborhood_box.Items.Add("Moore");
@@ -221,7 +222,7 @@ namespace Beginning_of_Grain_Growth
         {
             data.Kt = decimal.ToDouble(kt_box.Value);
             if (data.Kt == 0)
-                data.Kt = -6;
+                data.Kt = 0.1;
         }
     }
 }

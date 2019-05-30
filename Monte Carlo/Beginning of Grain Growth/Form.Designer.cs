@@ -427,10 +427,10 @@
             this.label12.TabIndex = 46;
             this.label12.Text = "kt:";
             // 
-            // energy_box
+            // kt_box
             // 
             this.kt_box.Location = new System.Drawing.Point(55, 81);
-            this.kt_box.Name = "energy_box";
+            this.kt_box.Name = "kt_box";
             this.kt_box.Size = new System.Drawing.Size(100, 20);
             this.kt_box.TabIndex = 45;
             this.kt_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

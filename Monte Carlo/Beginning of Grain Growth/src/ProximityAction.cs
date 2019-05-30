@@ -104,7 +104,7 @@ namespace Beginning_of_Grain_Growth.src
         {
             data.Initialize();
 
-            int LIMIT = 20;
+            int LIMIT = 10;
 
             for (int i = 0; i < data.Radius_cells_num; i++)
             {
